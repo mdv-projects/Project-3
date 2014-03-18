@@ -1,0 +1,34 @@
+html {
+    background-color: #E1DFD3;
+}
+body {
+    font-family: "Lucida Grande", "Arial", sans-serif;
+    margin: 1.5em auto;
+    padding: 1.9em;
+    background-color: white;
+    color: #4D4B39;
+    max-width: 35em;
+    border: 0.75em solid Purple;
+    line-height: 1.5em;
+}
+p {
+    margin: 1.5em 0;
+}
+h1 {
+    background-color: Teal;
+    color: Yellow;
+    font-size: 190%;
+    padding: 0.95em;
+    margin: -0.75em -0.75em 0.75em -0.75em;
+}
+h2 {
+    background-color: Teal;
+    color: Red;
+    font-size: 145%;
+    padding: 1em;
+    margin: -1em -1em 1em -1em;
+}
+h1 + h2 {
+    margin-top: -2em;
+    padding-top: 1em;
+}
