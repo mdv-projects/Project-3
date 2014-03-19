@@ -1,5 +1,3 @@
-//alert("JavaScript works!");
-
 // Hector Baldaguez Rodriguez
 // SDI 1403
 // 03/20/2014
@@ -11,10 +9,14 @@ var myDecision = "yes"
 var huntBord = "Hunting Board";
 var userName;
 
-/*var say = function (message) {console.log(message);};
-// My Prompt and Proceduer 
-alert("Welcome to " + title)
-userName = prompt("What is your Hunter name?");
+// The JSON data is in the json.js file
+
+
+// My Prompt and Proceduer
+var say = function (message) {console.log(message);};
+ 
+alert("Welcome to the World of " + title)
+userName = prompt("Welcome Hunter.","What is your Hunter name?");
 
 var userN = function (hunter) {
     
@@ -23,14 +25,19 @@ var userN = function (hunter) {
 };
 userN(name)
 
-// Confrimation
+// Array function. Monsters to hunt. Mission Board.
 
+var monstersNames = ["Gilbert the killer gunner", "The Scrapler, Shadrowing"];
+monstersNames[monstersNames.length] = "Gilbert the killer gunner"
+
+
+// Choosing mission from an array. In other words The mission board.
 
 myDecision = confirm("Choose a Mission from the " + huntBord + ". Ok for Scrapler or Cancel for Gunner");
 var decision = function (mission) {
     
     if (myDecision === true) {
-        //Mission to choose.
+        // What Mission to choose.
         say("Let's go hunting.");
     } else {
         say("Let's take him down.");
@@ -66,7 +73,7 @@ var attaking = function (hitPoints) {
     return hitPoints;
 };             
 var hp = attaking(3000);
-say("The monster has " + hp + " life left");*/
+say("The monster has " + hp + " life left");
 
 // This part is for the cunsumption of experience points.
 
