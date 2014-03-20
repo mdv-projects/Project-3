@@ -136,8 +136,20 @@ var attaking = function (hitPoints) {
 var hp = attaking(3000);
 say("The monster has " + hp + " life left");
 
-// This part is for the cunsumption of experience points.
+// This is the Boolean function.
+var battelRes = function (results) { 
+   //Battle result. 
+    if (hp <= 0 && hp == -330) {
+    //Battle resut. To see if the battle is won or not.
+        say("The Bttle has been won.");
+    } else {
+        say("You lost. Try again.");
+    }
+    return results;
+};
+var battRes = battelRes();
 
+// This part is for the cunsumption of experience points.
 var exp = function (levelUp) { 
     var levelInc = 150;
     var expPoints = 1200;
