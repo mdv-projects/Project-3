@@ -4,6 +4,7 @@
 // Project-3
 
 // My Variables
+var say = function (message) {console.log(message);};
 var title = "BladeBow Hunter";
 var myDecision = "yes"
 var huntBord = "Hunting Board";
@@ -13,8 +14,7 @@ var userName;
 
 
 // Title of the game.
-var say = function (message) {console.log(message);};
- 
+
 alert("Welcome to the World of " + title)
 userName = prompt("Welcome Hunter.","What is your Hunter name?");
 
@@ -24,7 +24,9 @@ var userN = function (hunter) {
     say("Your Hunter Name is " + userName);
     
 };
-userN(name)
+userN(name);
+
+alert("Welcome " + userName + " to the Hunting world.");
 
 // Array function. Monsters to hunt. Mission Board.
 var monsters = function() {
@@ -50,13 +52,31 @@ say("The missions are:");
         var monsterList = monstersNames;     
     };
     
-    
     return monsterList;
 };
 
 var mission = monsters();
 say("This are the monsters to hunt:");
 say(mission);
+alert("This are the monsters to hunt.")
+
+// This is the JSON Data. This is the monsters info.
+
+var monstersStats = function(stats) {
+    
+    for (var key in stats.monsterInfo) {
+    
+        for (var next in stats.monsterInfo[key]) {
+            
+            say(stats.monsterInfo[key][next]);
+        }
+    };
+    
+};
+
+monstersStats(monsterData);
+alert("This are the monsters stats.");
+say("Monsters Stats.")
 
 // Type of waepon to choose. Array Method
 
