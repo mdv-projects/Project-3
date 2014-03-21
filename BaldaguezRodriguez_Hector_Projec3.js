@@ -61,22 +61,20 @@ say(mission);
 alert("This are the monsters to hunt.")
 
 // This is the JSON Data. This is the monsters info.
-
-var monstersStats = function(stats) {
+say("Monsters Stats:")
+var monstersStats = function (stats) {
+  
+    for (var i = 0; i < stats.monsterInfo.length; i++){
+        var monsters = stats.monsterInfo[i];
+        say("Monster Name: " + monsters.monsterName + "Hp: " +
+            monsters.hp + "Lvl: " + monsters.level); 
+    };  
     
-    for (var key in stats.monsterInfo) {
-    
-        for (var next in stats.monsterInfo[key]) {
-            
-            say(stats.monsterInfo[key][next]);
-        }
-    };
     
 };
-
 monstersStats(monsterData);
 alert("This are the monsters stats.");
-say("Monsters Stats.")
+
 
 // Type of waepon to choose. Array Method
 
@@ -90,6 +88,7 @@ var lastWeapon = weapons.pop();// Taking out the connon weapon that is not neede
 say("We don't need the " + lastWeapon + ".")
 
 say("All we need for this mission is the " + weapons + ".")
+say(weapons);
 
 // Choosing mission from an array. In other words The mission board.
 // This will be the Boolean function to see if the battle is won or not.
@@ -132,7 +131,7 @@ var attaking = function (hitPoints) {
         
     }     
     return hitPoints;
-};             
+};            
 var hp = attaking(3000);
 say("The monster has " + hp + " life left");
 
@@ -142,25 +141,50 @@ var battelRes = function (results) {
     if (hp <= 0 && hp == -330) {
     //Battle resut. To see if the battle is won or not.
         say("The Bttle has been won.");
-    } else {
+    } else { if (hp !=0) { // This is the Nested condition.
+        
         say("You lost. Try again.");
+        };
+        
     }
     return results;
 };
 var battRes = battelRes();
 
 // This part is for the cunsumption of experience points.
+// This is the Number function
 var exp = function (levelUp) { 
     var levelInc = 150;
-    var expPoints = 1200;
+    var expPoints = 1200,
+        lvlUp = 1;
     while (levelInc <= expPoints){
-        say("Incrising the level of the weapon by " + levelInc + ". Level up to");
-        levelInc = levelInc + 150;
+        say("Incrising the level of the weapon by " + levelInc + ". Level up to " + lvlUp + ".");
+        levelInc = levelInc + 150,
+        lvlUp++;
     
-    };    
-        for (var levelInc = 150, expPoints = 1200; levelInc <= expPoints; levelInc = levelInc + 150) {
-          say("You have added " + levelInc + " per level.");  
+    };
+        
+        for (var levelInc = 150, expPoints = 1200, lvlUp = 1; levelInc <= expPoints; levelInc = levelInc + 150, lvlUp++) {
+        
+          say("You have added " + levelInc + " increased to level " + lvlUp + ".");  
         };
        return levelUp;
 };
 var level = exp();
+
+
+// This is the String function.
+
+var end = function (endGame) {
+    var theEnd = "You have won the game";
+    var over = "Game Over";
+        
+        if (battelRes != -330) {
+            say(theEnd);
+        }else if (battelRes == -330) {
+            //code
+            say(over);
+        }  
+     return
+};
+var gameOver = end();

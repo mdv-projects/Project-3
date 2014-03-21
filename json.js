@@ -5,20 +5,21 @@ var monsterData = {
         [
             {
                 "monsterName": "Gilbert the killer gunner",
-                "monsterHp": "Hp 3000",
-                "monsterLevel": "lvl.43" 
+                "hp": 3000,
+                "level": 43
             
             },
             {
                 "monsterName": "The Scrapler",
-                "monsterHp": "Hp 3000",
-                "monsterLevel": "lvl.43"
+                "hp": 3000,
+                "level": 43
             },
             {
                 "monsterName": "Nonsen the Blade",
-                "monsterHp": "Hp 3000",
-                "monsterLevel": "lvl.43"
+                "hp": 3000,
+                "level": 43
             }
         
         ]
+    
 };
